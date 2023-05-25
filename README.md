@@ -1,22 +1,16 @@
 # Cipher ONE - Challenge ONE T5 | Decodificador de Texto
 
+<p align="center">
+  <img alt="Oracle One logo" src="./.github/logo_one.svg">
+</p>
 
 **Cipher ONE** é um projeto desenvolvido para o desafio *Challenge ONE Iniciante em Programação* como parte do programa [*Oracle Next Generation*](https://www.oracle.com/br/education/oracle-next-education/) Turma 5 uma parceria [*Oracle*](https://www.oracle.com/br/) + [*Alura*](https://www.alura.com.br/).
 
 <p align="center">
-  <img alt="Alura + Oracle" src="./.github/logo_oracleAlura_branca.svg">
+  <img alt="Alura + Oracle logo" src="./.github/logo_oracle_alura.svg">
 </p>
 
 Nesse Sprint 01 o objetivo é construir um codificador/decodificador de texto com Javascript.
-
-
-
-<br>
-
-<p align="center">
-  <img alt="Por Alura + Oracle" src="https://img.shields.io/static/v1?label=Original&message=Alura-Oracle&color=white&labelColor=8257E5">
-  <img alt="License" src="https://img.shields.io/github/license/andrepaulino/cipher_one?label=License">
-</p>
 
 <br>
 
@@ -38,6 +32,12 @@ A ideia base é além do desafio técnico de desenvolver o produto, também simu
 <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white"/>
 
 <br>
+<br>
+<br>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/github/license/andrepaulino/cipher_one?label=License">
+</p>
 
 <p align="center"><b>
 Se gostou 🌟 - Por André Paulino {🎧}
