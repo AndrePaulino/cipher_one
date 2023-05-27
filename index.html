@@ -2,7 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/images/logo_alura.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo_alura.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cipher ONE</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,6 +18,43 @@
 	</head>
 
 	<body>
-		
+		<img alt="logo alura" class="padding-block-400" src="/logo_alura.svg" />
+
+		<div class="container">
+			<div class="cipher-action">
+				<div class="text-input">
+					<textarea
+						autofocus
+						placeholder="Digite seu texto"
+						type="text"
+					></textarea>
+					<p class="input-info">
+						<img
+							src="/exclamation_circle_fill.svg"
+							alt="Atenção!"
+						/>Apenas letras minúsculas e sem acento.
+					</p>
+				</div>
+
+				<div class="buttons">
+					<button class="button">Criptografar</button>
+					<button class="button" data-type="inverted">
+						Descriptografar
+					</button>
+				</div>
+			</div>
+
+			<div
+				class="text-output | bg-white padding-block-500 padding-inline-500"
+			>
+				<p class="fw-bold fs-secondary-heading lh-500 text-gray-500">
+					Nenhuma mensagem encontrada
+				</p>
+				<p class="text-gray-400">
+					Digite um texto que você deseja criptografar ou
+					descriptografar.
+				</p>
+			</div>
+		</div>
 	</body>
 </html>
