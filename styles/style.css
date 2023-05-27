@@ -44,6 +44,7 @@ body {
 	line-height: var(--lh-600);
 	border: none;
 	resize: none;
+	background-color: transparent;
 }
 
 .text-input textarea:focus,
@@ -52,6 +53,7 @@ body {
 }
 
 .text-input textarea::placeholder {
+	color: var(--clr-dark-blue-300);
 	opacity: 1;
 }
 
