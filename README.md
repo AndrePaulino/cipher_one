@@ -17,6 +17,8 @@ Nesse Sprint 01 o objetivo é construir um codificador/decodificador de texto co
 ## 📒 Proposta
 A ideia base é além do desafio técnico de desenvolver o produto, também simular um ambiente de desenvolvimento com a comunidade no Discord da turma, as nomenclaturas, o gerenciamento do projeto utilizando o Trello e design entregue no Figma.
 
+Como desafio pessoal, meu objetivo será implementar o design de forma *idêntica*, aproveitando a oportunidade de trabalhar com design de qualidade profissional para exercitar meus músculos *CSS*, seguindo a mentalidade *mobile first* e como um projeto profissional, considerando a expansão, evolução e possível colaboração de outros com um planejamento das classes, variáveis bem padronizadas. HTML bem semântico e e que torne a página perfeitamente acessível.
+
 <p align="center">
   <a href="https://trello.com/b/EmUFmjCv/decodificador-de-texto-alura-challenges-oracle-one">Trello</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=16%3A802">Figma</a>
