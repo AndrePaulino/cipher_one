@@ -3,7 +3,6 @@ body {
 	--padding: var(--size-400);
 	width: min(var(--max-width), 100% - (var(--padding) * 2));
 	margin-inline: auto;
-
 	background-color: var(--clr-light-blue-200);
 	font-size: var(--fs-body);
 	font-family: var(--ff-body);
@@ -15,14 +14,9 @@ body {
 	--max-width: 1160px;
 	width: min(var(--max-width), 100%);
 	margin-inline: auto;
+	margin-bottom: calc(var(--size-600) + var(--size-200));
 	display: grid;
-}
-
-@media (min-width: 90em) {
-	.container {
-		grid-auto-flow: column;
-		grid-auto-columns: 66.6% 33.3%;
-	}
+	gap: var(--size-800);
 }
 
 .cipher-action {
@@ -37,7 +31,7 @@ body {
 .text-input textarea {
 	width: 100%;
 	height: 18.6875rem;
-	margin-top: 3.5rem;
+	margin-top: calc(var(--size-700) + var(--size-200));
 	font-size: var(--fs-primary-heading);
 	color: var(--clr-dark-blue-300);
 	font-weight: var(--fw-bold);
@@ -69,24 +63,25 @@ body {
 }
 
 .buttons {
-	text-align: center;
+	display: grid;
+	gap: var(--size-500);
 }
 
 .text-output {
-	width: calc(100% - (var(--size-300) * 2));
-	margin: var(--size-600) auto;
+	margin: var(--size-600) 0 0 0;
 	text-align: center;
 	border: 1px solid black;
 	border-radius: var(--size-600);
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.08);
 }
 
-.text-output p:nth-child(1) {
-	margin-bottom: var(--size-400);
+.toggle-img {
+	display: none;
+	margin-bottom: var(--size-500);
+
 }
 
 .button {
-	width: 21.4375rem;
 	background-color: var(--clr-dark-blue-300);
 	color: var(--clr-white);
 	border-radius: var(--size-500);
@@ -95,7 +90,31 @@ body {
 }
 
 .button[data-type="inverted"] {
-	margin-top: var(--size-500);
 	color: var(--clr-dark-blue-300);
 	background-color: var(--clr-white);
+}
+
+/* @media screen and (min-width: 50em) { */
+@media screen and (min-width: 90em) {
+	.container {
+		grid-auto-flow: column;
+		grid-auto-columns: 66.6% 33.3%;
+	}
+
+	.buttons {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+
+	}
+
+	.toggle-img {
+		display: block;
+	}
+
+	.text-output{
+		max-height: 100vh;
+		padding-block: 25%;
+		position: relative;
+		top: -var(--size-900);
+	}
 }
