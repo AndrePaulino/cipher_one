@@ -127,3 +127,7 @@
 .padding-inline-500 {
 	padding-inline: var(--size-600);
 }
+
+.display-none {
+	display: none !important;
+}
