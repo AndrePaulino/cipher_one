@@ -128,6 +128,15 @@
 	padding-inline: var(--size-600);
 }
 
+.padding-block-25percent {
+	padding-block: 25% !important;
+}
+
 .display-none {
 	display: none !important;
+}
+
+.solid-black-border {
+	border: 1px solid black;
+	border-radius: var(--size-600);
 }
