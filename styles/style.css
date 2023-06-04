@@ -68,9 +68,9 @@ body {
 }
 
 .text-output {
-	margin-top: var(--size-600);
+	display: flex;
+	flex-direction: column;
 	text-align: center;
-	border: 1px solid black;
 	border-radius: var(--size-600);
 	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.08);
 	overflow-wrap: break-word;
@@ -95,15 +95,26 @@ body {
 	background-color: var(--clr-white);
 }
 
+@media screen and (min-width: 23.5em) {
+	.text-output {
+		border: none;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.buttons {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+
+	.text-output {
+		padding-inline: var(--size-600);
+	}
+}
 @media screen and (min-width: 90em) {
 	.container {
 		grid-auto-flow: column;
 		grid-auto-columns: 66.6% 33.3%;
-	}
-
-	.buttons {
-		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
 	}
 
 	.toggle-img {
@@ -112,8 +123,8 @@ body {
 
 	.text-output {
 		max-height: 100vh;
-		padding-block: 25%;
 		position: relative;
-		top: -var(--size-900);
+		justify-content: space-between;
+		top: var(--size-600);
 	}
 }
