@@ -77,6 +77,10 @@ body {
 	overflow-x: clip;
 }
 
+.text-output button[data-action="copy"] {
+	margin-top: var(--size-600);
+}
+
 .toggle-img {
 	display: none;
 	margin-bottom: var(--size-500);

@@ -8,6 +8,7 @@ const cipher_btn = document.querySelector("[data-action='cipher']");
 const decipher_btn = document.querySelector("[data-action='decipher']");
 const text_output_container = document.querySelector(".text-output");
 const text_output = document.querySelector("[data-action='text-output']");
+const copy_btn = document.querySelector("[data-action='copy']");
 
 let encrypted_msg;
 
@@ -45,6 +46,10 @@ decipher_btn.addEventListener("click", (event) => {
 	console.log(original_msg);
 });
 
+copy_btn.addEventListener("click", () =>
+	navigator.clipboard.writeText(text_output.innerHTML)
+);
+
 function showEncryptedMessage() {
 	const user_message = textarea.value;
 
@@ -57,6 +62,7 @@ function showEncryptedMessage() {
 	text_output.classList.remove("text-gray-500");
 	text_output.classList.remove("fw-bold");
 	text_output.classList.add("text-gray-400");
+	copy_btn.classList.remove("display-none");
 	instruction.classList.add("display-none");
 }
 
@@ -65,6 +71,7 @@ function resetMessage() {
 	text_output.classList.add("text-gray-500");
 	text_output.classList.add("fw-bold");
 	text_output.classList.remove("text-gray-400");
+	copy_btn.classList.add("display-none");
 	instruction.classList.remove("display-none");
 
 	if (window.matchMedia("screen and (max-width: 89.9em)").matches) {
