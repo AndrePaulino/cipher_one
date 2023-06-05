@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="logo_alura.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cipher ONE</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		
+		
+		
+		
+		<script type="module" crossorigin src="/cipher_one/assets/index-de1feaef.js"></script>
+		<link rel="stylesheet" href="/cipher_one/assets/index-6f846698.css">
+	</head>
+
+	<body>
+		<img alt="logo alura" class="padding-block-400" src="logo_alura.svg" />
+
+		<div class="container">
+			<div class="cipher-action">
+				<div class="text-input">
+					<textarea
+						autofocus
+						placeholder="Digite seu texto"
+						type="text"
+					></textarea>
+					<p class="input-info">
+						<img
+							src="exclamation_circle_fill.svg"
+							alt="Atenção!"
+						/>Apenas letras minúsculas e sem acento.
+					</p>
+				</div>
+
+				<div class="buttons">
+					<button class="button" data-action="cipher">
+						Criptografar
+					</button>
+					<button
+						class="button"
+						data-action="decipher"
+						data-type="inverted"
+					>
+						Descriptografar
+					</button>
+				</div>
+			</div>
+
+			<div
+				class="text-output | bg-white solid-black-border padding-block-500"
+			>
+				<img
+					alt="Ilustração de um garoto observando um diamante por uma lupa"
+					class="toggle-img"
+					src="search_illustration.svg"
+				/>
+				<p
+					class="fw-bold fs-secondary-heading lh-500 text-gray-500"
+					data-action="text-output"
+				>
+					Nenhuma mensagem encontrada
+				</p>
+				<p class="text-gray-400" data-action="instruction">
+					Digite um texto que você deseja criptografar ou
+					descriptografar.
+				</p>
+				<button
+					class="button | display-none"
+					data-action="copy"
+					data-type="inverted"
+				>
+					Copiar
+				</button>
+			</div>
+		</div>
+
+		<footer>
+			<p>
+				Por
+				<a class="hover-fx" href="https://github.com/AndrePaulino/"
+					>André Paulino</a
+				>
+				{🎧}
+			</p>
+		</footer>
+	</body>
+</html>
