@@ -12,7 +12,6 @@ const copy_btn = document.querySelector("[data-action='copy']");
 
 resetMessage();
 if (textarea.value) {
-	toggle_img.classList.add("display-none");
 	displayMessageEncrypted(true);
 }
 
@@ -34,13 +33,17 @@ copy_btn.addEventListener("click", () =>
 
 function displayMessageEncrypted(isToEncrypt) {
 	const user_message = textarea.value;
-	if (!user_message) return;
+	if (!user_message) {
+		resetMessage();
+		return;
+	}
 
 	const message = isToEncrypt
 		? Encipher(user_message)
 		: Decipher(user_message);
 
 	text_output.innerText = message;
+	toggle_img.classList.add("display-none");
 	text_output_container.classList.remove("padding-block-25percent");
 	text_output_container.classList.remove("solid-black-border");
 	text_output.classList.remove("text-gray-500");
@@ -51,15 +54,16 @@ function displayMessageEncrypted(isToEncrypt) {
 }
 
 function resetMessage() {
-	text_output.innerHTML = "Nenhuma mensagem encontrada";
+	text_output.innerText = "Nenhuma mensagem encontrada";
+	toggle_img.classList.remove("display-none");
 	text_output.classList.add("text-gray-500");
 	text_output.classList.add("fw-bold");
 	text_output.classList.remove("text-gray-400");
 	copy_btn.classList.add("display-none");
 	instruction.classList.remove("display-none");
 
-	if (window.matchMedia("screen and (max-width: 89.9em)").matches) {
-		text_output_container.classList.remove("padding-block-25percent");
+	if (window.matchMedia("screen and (min-width: 89.9em)").matches) {
+		text_output_container.classList.add("padding-block-25percent");
 	}
 
 	if (window.matchMedia("screen and (max-width: 23.5em)").matches) {
