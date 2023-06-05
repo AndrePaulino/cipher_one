@@ -10,8 +10,6 @@ const text_output_container = document.querySelector(".text-output");
 const text_output = document.querySelector("[data-action='text-output']");
 const copy_btn = document.querySelector("[data-action='copy']");
 
-let encrypted_msg;
-
 resetMessage();
 if (textarea.value) {
 	toggle_img.classList.add("display-none");
@@ -38,13 +36,7 @@ textarea.addEventListener("keydown", (event) => {
 
 cipher_btn.addEventListener("click", showEncryptedMessage);
 
-decipher_btn.addEventListener("click", (event) => {
-	encrypted_msg = text_output.innerHTML;
-
-	const original_msg = Decipher(encrypted_msg);
-
-	console.log(original_msg);
-});
+decipher_btn.addEventListener("click", showUnencryptedMessage);
 
 copy_btn.addEventListener("click", () =>
 	navigator.clipboard.writeText(text_output.innerHTML)
@@ -52,18 +44,16 @@ copy_btn.addEventListener("click", () =>
 
 function showEncryptedMessage() {
 	const user_message = textarea.value;
-
-	encrypted_msg = Encipher(user_message);
+	const encrypted_msg = Encipher(user_message);
 	if (!encrypted_msg) return;
+	displayMessage(encrypted_msg);
+}
 
-	text_output.innerHTML = encrypted_msg;
-	text_output_container.classList.remove("padding-block-25percent");
-	text_output_container.classList.remove("solid-black-border");
-	text_output.classList.remove("text-gray-500");
-	text_output.classList.remove("fw-bold");
-	text_output.classList.add("text-gray-400");
-	copy_btn.classList.remove("display-none");
-	instruction.classList.add("display-none");
+function showUnencryptedMessage() {
+	const user_encrypted_msg = textarea.value;
+	const original_msg = Decipher(user_encrypted_msg);
+	if (!original_msg) return;
+	displayMessage(original_msg);
 }
 
 function resetMessage() {
@@ -81,4 +71,16 @@ function resetMessage() {
 	if (window.matchMedia("screen and (max-width: 23.5em)").matches) {
 		text_output_container.classList.add("solid-black-border");
 	}
+}
+
+function displayMessage(message) {
+	text_output.innerText = message;
+
+	text_output_container.classList.remove("padding-block-25percent");
+	text_output_container.classList.remove("solid-black-border");
+	text_output.classList.remove("text-gray-500");
+	text_output.classList.remove("fw-bold");
+	text_output.classList.add("text-gray-400");
+	copy_btn.classList.remove("display-none");
+	instruction.classList.add("display-none");
 }
