@@ -39,7 +39,7 @@ Como desafio pessoal, meu objetivo será implementar o design de forma *idêntic
 <br>
 <br>
 
-<p align="center">Selo de Completudo Desafio 01</p>
+<p align="center">Selo de Completude Desafio 01</p>
 <p align="center">
   <img alt="Selo de completude desafio 01" src="./.github/challenge_01_badge.png" width="350px">
 </p>
